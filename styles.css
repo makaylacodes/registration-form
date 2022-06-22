@@ -3,12 +3,98 @@ body{
     height: 100vh;
     
     margin: 0;
-    background-color:#1b1b32;
+    /*background-color:#6e6eb2;*/
+    background-color:#805f72 ;
     color:#f5f6f7;
+
+    font-family: 'Source Serif 4', serif;
+	font-size: 16px;
 }
 
 /*Label elements are inline by default. Use display and margin to separate*/
 label{
-        display:block;
-        margin:.5rem 0;
-      }
+    display:block;
+    margin:.5rem 0;
+}
+
+h1, p{
+    margin:1em auto;
+    text-align:center;
+  }
+
+/*This centers the form on the webpage*/
+form{
+    margin:0 auto;
+    max-width:500px;
+    min-width:300px;
+    width:60vw;
+    /*Helps lift the submit button off the floor*/
+    padding:2em;
+}
+
+/*Cleans up the fieldset section. Added padding to the 
+top and bottom, but removed padding from left and right */
+fieldset{
+  border:0;
+  padding: 2rem 0;
+}
+
+/*This gives a border between the 1st and 2nd sections as well as the 
+2nd and 3rd sections, but not the very bottom*/
+fieldset:not(:last-of-type){
+    border-bottom: 3px solid #3b3b4f;
+}
+
+/*This puts the input boxes underneath the text*/
+input, textarea, select{
+  width:100%;
+  margin:10px;
+  margin-bottom:0;
+  margin-left:0;
+  margin-right:0;
+}
+
+/*This removes the earlier rule that set all inputs to width 100%
+Gets the second fieldset(account-type) inline*/
+.inline{
+    width:unset;
+  /*Adds space between inline and label elements*/
+  margin-right:0 0.5em 0 0;
+  vertical-align:middle;
+
+  }
+
+/*I changed the color of the input boxes to blend in with background*/
+input, textarea{
+    background-color: #3d3037;
+    border: 3px solid #0a0a23;
+    /*Changes the color and size of the text the user enters*/
+    color:#ffffff;
+    /*This sets the min height for the size of the input box*/
+    min-height:2em;
+}
+
+/*This attribute selector styles the submit button*/
+input[type="submit"]{
+    display:block;
+    width:60%;
+    min-width:300px;
+    margin: auto;
+    /*Trying to get the button more inline with the rest of the form*/
+    height:2em;
+    font-size:1.3rem;
+    border:3px solid #0a0a23;
+  }
+
+  /*This sets the padding for the choose file button*/
+input[type="file"] {
+    padding:3px 2px;
+}
+
+/*changes the color of the hyperlink*/
+a{
+    color:#dfdfe2;
+  }
+
+
+/**/
