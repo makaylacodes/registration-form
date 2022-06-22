@@ -15,34 +15,80 @@
        <form action="https://register-demo.freecodecamp.org">
         
         <fieldset>
-            <label>Enter Your First Name: <input type="text" required /></label>
-            <label>Enter Your Last Name: <input type="text" required /></label>
-            <label>Enter Your Email: <input type="email" required /></label>
-            <!--The pattern attribute can be use to set min password length-->
-            <label>Create a New Password: <input type="password" pattern="[a-z0-5]{8,}" required /></label>
-          </fieldset>
-
+            <label>
+                Enter Your First Name: 
+                <input type="text" required name="first-name" />
+            </label>
+            <label>
+                Enter Your Last Name: 
+                <input type="text" required name="last-name" />
+            </label>
+            <label>
+                Enter Your Email: 
+                <input type="email" required name="email"/>
+            </label>
+            <label>
+                Create a New Password: 
+                <input type="password" pattern="[a-z0-5]{8,}" required name="password"/>
+            </label>
+        </fieldset> 
+        
         <fieldset>
             <label>
                 <input type="radio" name="account-type" /> 
                 Personal Account
-            </label> 
+            </label>
             <label>
                 <input type="radio" name="account-type" /> 
                 Business Account
             </label>
             <label>
-            <input type="checkbox" required /> 
-            I accept the
-				<a href="https://www.freecodecamp.org/news/terms-of-service/">
-                    terms and conditions
-                </a>
-			</label>
-        </fieldset>
+                <input type="checkbox" required name="checkbox" /> 
+                I accept the 
+                <a href="https://www.freecodecamp.org/news/terms-of-service/">
+                terms and conditions
+            </a>
+        </label>
+    </fieldset>
+    
+    <fieldset>
+        <label>
+            Upload a profile picture: 
+            <input type="file" name="picture"/>
+        </label>
+        <label>
+            Input your age (years): 
+            <input type="number" min="13" max="120" name="age" />
+        </label>
+        <label>
+            How did you hear about us? 
+            <select name="options">
+                <option value="">
+                    (select one)
+                </option>
+                <option value="1">
+                    freeCodeCamp News
+                </option>
+                <option value="2">
+                    freeCodeCamp YouTube Channel
+                </option>
+                <option value="3">
+                    freeCodeCamp Forum
+                </option>
+                <option value="4">
+                    Other
+                </option>
+              </select>
+            </label>
 
-        <fieldset>
-            
-        </fieldset>
+            <label>
+                Provide a bio:
+                <textarea rows="3" cols="30" placeholder="I like coding on the beach..." name="bio">
+                    
+                </textarea>
+            </label>
+          </fieldset>
+
        </form>
     </body>
 </html>
